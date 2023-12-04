@@ -31,8 +31,8 @@ jobs:
 
     strategy:
       matrix:
-        os: macos-latest
-        platform: 'darwin-arm64v8'
+      - os: macos-latest
+        platform: darwin-arm64v8
 
     steps:
       - name: Check out Git repository
