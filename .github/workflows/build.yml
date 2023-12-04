@@ -36,7 +36,7 @@ jobs:
           #   host: Windows
           # - os: ubuntu-latest
           #   host: Linux
-          - os: macos-13-xlarge
+          - os: m1max
             host: MacOs
 
     name: Build Launcher for ${{ matrix.host }}
