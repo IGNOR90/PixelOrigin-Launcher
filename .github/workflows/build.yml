@@ -33,17 +33,8 @@ jobs:
     #   matrix:
 
     #     os: [macos-latest, ubuntu-latest, windows-latest]
-
-
-
-
-
-
-
-
-
-
-      runs-on: ${{ matrix.os }}
+    
+    runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
@@ -74,7 +65,7 @@ jobs:
             node: 16
             host: arm64
             target: arm64
-      name: ${{ matrix.os }} (node=${{ matrix.node }}, host=${{ matrix.host }}, target=${{ matrix.target }})
+    name: ${{ matrix.os }} (node=${{ matrix.node }}, host=${{ matrix.host }}, target=${{ matrix.target }})
 
 
 
