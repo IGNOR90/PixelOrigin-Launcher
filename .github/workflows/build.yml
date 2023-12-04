@@ -32,14 +32,13 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - os: windows-latest
-            host: Windows
-          - os: ubuntu-latest
-            host: Linux
-          - os: macos-m1
-            host: MacOs
+          # - os: windows-latest
+          #   host: Windows
+          # - os: ubuntu-latest
+          #   host: Linux
           - os: macos-latest
             host: MacOs
+
     name: Build Launcher for ${{ matrix.host }}
 
     steps:
