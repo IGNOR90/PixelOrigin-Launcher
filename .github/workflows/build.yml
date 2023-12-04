@@ -27,7 +27,8 @@ jobs:
 
   build-launcher:
     # needs: create-release
-    runs-on: ${{ matrix.os }}
+    name: "Build: ${{ matrix.config.name }} / ${{ matrix.config.architecture }}"
+    runs-on: ${{ matrix.config.os }}
     strategy:
       fail-fast: true
       matrix:
