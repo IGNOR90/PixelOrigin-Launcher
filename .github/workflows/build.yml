@@ -27,61 +27,15 @@ jobs:
 
   build-launcher:
     # needs: create-release
-    # runs-on: macos-latest-large
-
-    # strategy:
-    #   matrix:
-
-    #     os: [macos-latest, ubuntu-latest, windows-latest]
-    
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
         os:
-          - macos-latest
-          - ubuntu-20.04
+          - ubuntu-latest
           - windows-latest
-        host:
-          - x64
-        target:
-          - x64
         include:
-          - os: windows-latest
-            node: 18
-            host: x86
-            target: x86
           - os: macos-m1
-            node: 18
-            host: arm64
-            target: arm64
-    name: ${{ matrix.os }} (host=${{ matrix.host }}, target=${{ matrix.target }})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     steps:
       - name: Check out Git repository
