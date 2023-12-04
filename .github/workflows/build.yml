@@ -27,7 +27,7 @@ jobs:
 
   build-launcher:
     # needs: create-release
-    runs-on: ${{ matrix.os }}
+    runs-on: macos-latest-large
 
     strategy:
       matrix:
