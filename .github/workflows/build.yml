@@ -29,17 +29,30 @@ jobs:
     # needs: create-release
     runs-on: ${{ matrix.os }}
     strategy:
-      fail-fast: false
+      fail-fast: true
       matrix:
-        include:
-          # - os: windows-latest
-          #   host: Windows
-          # - os: ubuntu-latest
-          #   host: Linux
-          - os: macos-13-x
-            host: MacOs
-
-    name: Build Launcher for ${{ matrix.host }}
+        config:
+          - {
+              name: "Ubuntu Latest GCC",
+              artifact: "hugin-ubuntu-x64",
+              os: ubuntu-22.04,
+              cc: "gcc",
+              architecture: x64,
+            }
+          - {
+            name: "macOS M1 Latest Clang",
+            artifact: "hugin-macos-m1",
+            os: macos-12.0,
+            cc: "clang",
+            architecture: arm64,
+          }
+          - {
+            name: "macOS Latest Clang",
+            artifact: "hugin-macos-x64",
+            os: macos-12.0,
+            cc: "clang",
+            architecture: x64,
+          }
 
     steps:
       - name: Check out Git repository
