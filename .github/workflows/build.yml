@@ -33,14 +33,16 @@ jobs:
       matrix:
         os:
         include:
-          - os: macos-latest
-            sysem: macOS
           - os: windows-latest
-            sysem: Windows
+            host: Windows
           - os: ubuntu-latest
-            sysem: Linux
+            host: Linux
+          - os: macos-m1
+            host: MacOs
+          - os: macos-latest
+            host: MacOs
+    name: Build Launcher for ${{ matrix.host }}
 
-    name: {{ matrix.sysem }} Build
     steps:
       - name: Check out Git repository
         uses: actions/checkout@v1
