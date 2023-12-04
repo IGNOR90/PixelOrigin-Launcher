@@ -27,11 +27,7 @@ jobs:
 
   build-launcher:
     needs: create-release
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os: [macos-latest, ubuntu-latest, windows-latest, macos-m1]
+    runs-on: macos-latest-xlarge
 
     steps:
       - name: Check out Git repository
