@@ -27,34 +27,27 @@ jobs:
 
   build-launcher:
     # needs: create-release
-    name: "Build: ${{ matrix.config.name }} / ${{ matrix.config.architecture }}"
+    name: "Build Launcher for ${{ matrix.config.name }}"
     runs-on: ${{ matrix.config.os }}
     strategy:
       fail-fast: true
       matrix:
         config:
           - {
-              name: "Ubuntu Latest GCC",
-              artifact: "hugin-ubuntu-x64",
-              os: ubuntu-22.04,
-              cc: "gcc",
-              architecture: x64,
+              name: "Ubuntu",
+              os: ubuntu-latest,
+              architecture: x64
             }
           - {
-            name: "macOS M1 Latest Clang",
-            artifact: "hugin-macos-m1",
-            os: macos-12.0,
-            cc: "clang",
-            architecture: arm64,
-          }
+              name: "Windows",
+              os: windows-latest,
+              architecture: x64
+            }
           - {
-            name: "macOS Latest Clang",
-            artifact: "hugin-macos-x64",
-            os: macos-12.0,
-            cc: "clang",
-            architecture: x64,
-          }
-
+              name: "MacOS",
+              os: macos-latest,
+              architecture: arm64
+            }
     steps:
       - name: Check out Git repository
         uses: actions/checkout@v1
