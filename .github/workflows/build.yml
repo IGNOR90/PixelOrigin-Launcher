@@ -32,11 +32,15 @@ jobs:
       fail-fast: false
       matrix:
         os:
-          - ubuntu-latest
-          - windows-latest
         include:
-          - os: macos-m1
+          - os: macos-latest
+            sysem: macOS
+          - os: windows-latest
+            sysem: Windows
+          - os: ubuntu-latest
+            sysem: Linux
 
+    name: {{ matrix.sysem }} Build
     steps:
       - name: Check out Git repository
         uses: actions/checkout@v1
