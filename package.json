@@ -1,15 +1,15 @@
 {
-    "name": "PixelOrigin-Launcher",
-    "preductname": "PixelOrigin Launcher",
-    "version": "1.0.0",
-    "description": "Launcher Mincraft PixelOrigin",
+    "name": "GTOOrigin-Launcher",
+    "preductname": "GTOOrigin Launcher",
+    "version": "1.0.1",
+    "description": "Launcher Mincraft GTO",
     "main": "src/app.js",
     "author": {
         "name": "luuxis, Inc.",
         "email": "contact@luuxis.fr",
         "url": "https://github.com/luuxis"
     },
-    "url": "http://dyazo.luuxis.fr",
+    "url": "http://93.170.221.18",
     "scripts": {
         "start": "cross-env-shell NODE_ENV=dev electron .",
         "dev": "cross-env-shell DEV_TOOL=open nodemon --exec npm start",
@@ -33,12 +33,12 @@
         "electron": "^27.0.4",
         "electron-builder": "^24.6.4",
         "javascript-obfuscator": "^4.1.0",
-        "jimp": "^0.22.10",
+        "jimp": "^0.3.5",
         "nodemon": "^3.0.1",
         "png2icons": "^2.0.1"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/luuxis-fiverr/PixelOrigin-Launcher.git"
+        "url": "git+https://github.com/IGNOR90/PixelOrigin-Launcher.git"
     }
 }
