@@ -2,39 +2,39 @@
     <div class="nav-settings">
         <p>Paramètres</p>
         <div class="nav-box">
-            <div id="account" class="nav-settings-btn active-settings-BTN">COMPTES</div>
-            <div id="java" class="nav-settings-btn">JAVA</div>
-            <div id="resolution" class="nav-settings-btn">RESOLUTION</div>
-            <div id="launcher" class="nav-settings-btn">LAUNCHER</div>
-            <div id="save" class="nav-settings-btn">ACCUEIL</div>
+            <div id="account" class="nav-settings-btn active-settings-BTN">Аккаунты</div>
+            <div id="java" class="nav-settings-btn">Настройка JAVA</div>
+            <div id="resolution" class="nav-settings-btn">Настройка экрана</div>
+            <div id="launcher" class="nav-settings-btn">Настройки лаунчера</div>
+            <div id="save" class="nav-settings-btn">Назад</div>
         </div>
     </div>
 
     <div id="account-tab" class="container-settings active-container-settings">
-        <div class="titre-tab">Comptes joueurs</div>
+        <div class="titre-tab">Аккаунты</div>
 
         <div class="accounts-list content-scroll">
             <div class="account" id="add">
                 <div class="add-profile">
                     <div class="icon-account-add"></div>
                 </div>
-                <div class="add-text-profile">Ajouter un compte</div>
+                <div class="add-text-profile">Добавить аккаунт</div>
             </div>
         </div>
     </div>
 
     <div id="java-tab" class="container-settings content-scroll">
-        <div class="titre-tab">Paramètre de votre RAM</div>
+        <div class="titre-tab">Настройка оперативной памяти</div>
         <div class="settings-elements-box">
             <div class="setting-text">
-                Définition de la RAM alloué à votre jeu, une quantité plus important augmenteras les performances de
-                votre jeu.<br>
-                A noter qu'il faut éviter de mettre une trop grande quantité sinon cela peut provoquer des pertes de
-                performances sur vos autres applications.<br><br>
-                <b>-RAM Maximale:</b> Indique la quantité totale de RAM allouée à votre jeu. Il est recommandé de ne pas
-                dépasser 50% de la quantité totale de RAM présente sur votre PC.<br><br>
-                <b>-RAM Minimale:</b> Indique la quantité minimale de RAM allouée au démarrage de votre jeu. Il est
-                recommandé de ne pas mettre plus de 4Go pour cette valeur.
+                Установив объем оперативной памяти, выделенный вашей игре, больший объем повысит производительность
+                вашей игры.<br>
+                Обратите внимание, что вам следует избегать добавления слишком большого количества, иначе это может
+                привести к снижению производительности других ваших приложений.<br><br>
+                <b>-RAM Maximale:</b> Указывает общий объем оперативной памяти, выделенной вашей игре. Рекомендуется не
+                превышать 50 % от общего объема оперативной памяти вашего ПК.<br><br>
+                <b>-RAM Minimale:</b> Указывает минимальный объем оперативной памяти, выделяемый при запуске вашей
+                игры.Рекомендуется не ставить для этого значения менее 4ГБ.
             </div>
             <div class="settings-elements content-evenly">
                 <div class="memory-slider" min="0.5" max="8" step="0.5">
@@ -49,38 +49,38 @@
                     </div>
                 </div>
                 <div class="ram-info-block">
-                    <b>Vous possédez un total de <span id="total-ram">0 Go</span> RAM.</b><br>
-                    <b>Vous possédez un total de <span id="free-ram">0 Go</span> RAM disponible.</b>
+                    <b>У вас есть всего <span id="total-ram">0 Go</span> RAM.</b><br>
+                    <b>---------------- <span id="free-ram">0 Go</span> RAM disponible.</b>
                 </div>
             </div>
         </div>
 
-        <div class="titre-tab">Emplacement de Java</div>
+        <div class="titre-tab">Расположение de Java</div>
         <div class="settings-elements-box">
             <div class="setting-text">
-                Le launcher utilise une version embarquée de Java.<br>
-                Cette version est disponible dans le répertoire :<br><span class="java-path-txt"></span><br>
-                Toutefois, vous pouvez spécifier votre propre exécutable si votre jeu requiert une version de java plus
-                recente.
+                В программе запуска используется встроенная версия Java.<br>
+                Эта версия доступна в каталоге :<br><span class="java-path-txt"></span><br>
+                Однако вы можете указать свой собственный исполняемый файл, если для вашей игры требуется более новая
+                версия Java.
             </div>
             <div class="settings-elements content-evenly">
                 <input type="text" class="java-path-input-text" disabled>
-                <input type="file" class="java-path-input-file" accept="application/octet-stream" />
+                <input type="file" class="java-path-input-file" accept="application/octet-stream"/>
                 <div class="java-path-box">
-                    <div class="java-path-set java-path-btn">Changer</div>
-                    <div class="java-path-reset java-path-btn">Par defaut</div>
+                    <div class="java-path-set java-path-btn">Изменить</div>
+                    <div class="java-path-reset java-path-btn">По умолчанию</div>
                 </div>
             </div>
         </div>
     </div>
 
     <div id="resolution-tab" class="container-settings">
-        <div class="titre-tab">Paramètres de resolution Minecraft</div>
+        <div class="titre-tab">Настройки разрешения Minecraft</div>
         <div class="settings-elements-box">
             <div class="setting-text">
-                Définissez une résolution personnalisée afin d'avoir un jeu adapté à votre écran.<br>
-                Par défaut le jeu démarre en 854 X 480,<br>vous pouvez modifier cette valeur pour un confort de jeu
-                optimal. La résolution idéale est de 1280 X 720.
+                Установите собственное разрешение, чтобы игра соответствовала размеру вашего экрана.<br>
+                По умолчанию игра запускается с разрешением 854 x 480.<br>Вы можете изменить это значение для
+                оптимального комфорта в игре. Идеальное разрешение — 1280x720.
             </div>
             <div class="settings-elements content-center">
                 <div class="input-size-element">
@@ -88,55 +88,54 @@
                     <div class="size-cross"></div>
                     <input type="number" class="height-size input-resolution">
                 </div>
-                <div class="size-reset size-btn">Par defaut</div>
+                <div class="size-reset size-btn">По умолчанию</div>
             </div>
         </div>
     </div>
 
     <div id="launcher-tab" class="container-settings content-scroll">
-        <div class="titre-tab">Paramètre de téléchargement</div>
+        <div class="titre-tab">Параметры запуска</div>
         <div class="settings-elements-box">
             <div class="setting-text">
-                Ce paramètre détermine le nombre maximum de fichiers pouvant être téléchargés simultanément lors de la
-                mise à jour ou du téléchargement de ressources.<br><br>
+                Этот параметр определяет максимальное количество файлов, которые можно загрузить одновременно при
+                обновлении или загрузке ресурсов.<br><br>
 
-                Veuillez noter que la modification de ce paramètre peut affecter les performances de
-                téléchargement.<br>
-                Il est recommandé de ne pas dépasser les limites recommandées par défaut,<br>
-                sauf si vous rencontrez des problèmes spécifiques de connectivité.
+                Обратите внимание, что изменение этого параметра может повлиять на производительность загрузки.<br>
+                Рекомендуется не превышать рекомендуемые пределы по умолчанию,<br>
+                если у вас нет особых проблем с подключением.
             </div>
             <div class="settings-elements content-center">
                 <input type="number" class="max-files input-max-files">
                 <p>Fichiers</p>
-                <div class="max-files-reset max-files-btn">Par defaut</div>
+                <div class="max-files-reset max-files-btn">По умолчанию</div>
             </div>
         </div>
 
-        <div class="titre-tab">Thème clair et sombre</div>
+        <div class="titre-tab">Выбор темы</div>
         <div class="settings-elements-box">
             <div class="setting-text">
-                Choisissez entre le thème clair et le thème sombre pour personnaliser l'apparence du launcher.<br><br>
+                Выберите между светлой и темной темой, чтобы настроить внешний вид панели запуска.<br><br>
 
-                La modification du thème peut influencer la lisibilité et l'expérience visuelle.<br>
-                Sélectionnez celui qui vous convient le mieux en fonction de vos préférences.
+                Изменение темы может повлиять на читаемость и визуальное восприятие.<br>
+                Выберите тот, который подходит вам лучше всего, исходя из ваших предпочтений.
             </div>
             <div class="settings-elements content-center theme-box">
-                <div class="theme-btn theme-btn-clair">Clair</div>
-                <div class="theme-btn theme-btn-sombre">Sombre</div>
-                <div class="theme-btn theme-btn-auto">Automatique</div>
+                <div class="theme-btn theme-btn-clair">Прозрачный</div>
+                <div class="theme-btn theme-btn-sombre">Темный</div>
+                <div class="theme-btn theme-btn-auto">Автоматический</div>
             </div>
         </div>
 
-        <div class="titre-tab">Comportement du launcher au démarrage</div>
+        <div class="titre-tab">Поведение лаунчера при запуске</div>
         <div class="settings-elements-box">
             <div class="setting-text">
-                Vous pouvez choisir si le launcher se ferme automatiquement ou reste ouvert lorsque vous lancez le jeu.
+                Вы можете выбрать, будет ли панель запуска закрываться автоматически или оставаться открытой при запуске игры.
             </div>
 
             <div class="settings-elements content-evenly close-box">
-                <div class="close-launcher close-btn">Fermer le launcher après le démarrage du jeu</div>
-                <div class="close-none close-btn">Garder le launcher ouvert</div>
-                <div class="close-all close-btn">Fermer le jeu si le launcher est fermé</div>
+                <div class="close-launcher close-btn">Закрыть лаунчер после запуска игры</div>
+                <div class="close-none close-btn">Оставить лаунчер открытым</div>
+                <div class="close-all close-btn">Закрыть игру, если лаунчер закрыт.</div>
             </div>
         </div>
 
