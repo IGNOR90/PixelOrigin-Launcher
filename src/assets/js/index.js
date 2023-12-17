@@ -51,14 +51,14 @@ class Splash {
 
     async checkUpdate() {
         if (dev) return this.startLauncher();
-        this.setStatus(`Recherche de mise à jour...`);
+        this.setStatus(`Проверка обновлений...`);
 
         ipcRenderer.invoke('update-app').then().catch(err => {
             return this.shutdown(`erreur lors de la recherche de mise à jour :<br>${err.message}`);
         });
 
         ipcRenderer.on('updateAvailable', () => {
-            this.setStatus(`Mise à jour disponible !`);
+            this.setStatus(`Доступно обновление !`);
             ipcRenderer.send('start-update');
         })
 
@@ -73,7 +73,7 @@ class Splash {
         })
 
         ipcRenderer.on('update-not-available', () => {
-            console.error("Mise à jour non disponible");
+            console.error("Обновление недоступно");
             this.maintenanceCheck();
         })
     }
@@ -84,12 +84,12 @@ class Splash {
             this.startLauncher();
         }).catch(e => {
             console.error(e);
-            return this.shutdown("Aucune connexion internet détectée,<br>veuillez réessayer ultérieurement.");
+            return this.shutdown("Подключение к Интернету не обнаружено.<br>Повторите попытку позже.");
         })
     }
 
     startLauncher() {
-        this.setStatus(`Démarrage du launcher`);
+        this.setStatus(`Запуск лаунчера`);
         ipcRenderer.send('main-window-open');
         ipcRenderer.send('update-window-close');
     }

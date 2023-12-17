@@ -1,7 +1,7 @@
 {
-    "name": "GTOOrigin-Launcher",
-    "preductname": "GTOOrigin Launcher",
-    "version": "1.0.6",
+    "name": "GTO-Origin-Launcher",
+    "preductname": "GTO-Origin Launcher",
+    "version": "1.0.7",
     "description": "Launcher Mincraft GTO",
     "main": "src/app.js",
     "author": {
